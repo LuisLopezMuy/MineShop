@@ -5,7 +5,7 @@ function NotFound(){
     return(
         <div>
             <NavBar/>
-            <h1>404 Page not found</h1>
+            <h1 >404 Page not found</h1>
             <Link to="/">Home</Link>
         </div>
     )

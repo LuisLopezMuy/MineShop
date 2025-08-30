@@ -9,12 +9,35 @@
     justify-content: space-between;
 }
 
-.iconsDiv > svg {
+.iconsDiv > a {
+    margin-right: 10px;
     margin-left: 10px;
+    color: rgb(53, 52, 52);
 }
 
 .navbar-brand{
     font-family: "Press start 2p";
     font-size: 25px;
     font-weight: 800;
+    display: flex;
+}
+
+.navbar-brand > img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+
+.navbar-brand > div {
+    display: flex;
+    align-items: center;
+}
+
+.navBar{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.navBar > nav{
+    position: inherit;
 }
