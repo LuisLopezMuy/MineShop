@@ -17,7 +17,7 @@ function NavBar() {
     return (
 
         <div className="navBar">
-            <nav className="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+            <nav className="navbar navbar-expand-lg bg-body-tertiary">
                 <div className="container-fluid">
                     <div className="flexDiv">
 
@@ -38,7 +38,7 @@ function NavBar() {
                             <div className="iconsDiv col-6 col-xl-3 order-2 order-xl-3">
                                 <div className="iconsDiv">
                                     <Link className="nav-link" to="/favoritos">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-bookmark-heart" viewBox="0 0 16 16">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-bookmark-heart" viewBox="0 0 16 16">
                                             <path fill-rule="evenodd" d="M8 4.41c1.387-1.425 4.854 1.07 0 4.277C3.146 5.48 6.613 2.986 8 4.412z" />
                                             <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z" />
                                         </svg>
@@ -60,48 +60,40 @@ function NavBar() {
 
                         </div>
 
+                        <div className="sec2 scroll-container">
+                            <div className="nav-link">
+                                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Categorías
+                                </a>
+                                <ul className="dropdown-menu">
+                                    <li>
+                                        <Link className="dropdown-item paraEfecto" to="/productos/tecnologia"> Tecnologia </Link>
+                                    </li>
+                                    <li>
+                                        <Link className="dropdown-item paraEfecto" to="/productos/hogar"> Hogar </Link>
+                                    </li>
+                                </ul>
+                            </div>
 
-                        <div className="nav2">
-
-                            <ul className="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
-
-                                <li className="nav-item dropdown">
-                                    <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Categorías
-                                    </a>
-                                    <ul className="dropdown-menu">
-                                        <li>
-                                            <Link className="dropdown-item" to="/productos/tecnologia"> Tecnologia </Link>
-                                        </li>
-                                        <li>
-                                            <Link className="dropdown-item" to="/productos/hogar"> Hogar </Link>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/productos/ofertas"> Ofertas </Link>
-                                </li>
-
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/productos/nuevos"> Nuevo Ingreso </Link>
-                                </li>
-
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/tiendas"> Tiendas </Link>
-                                </li>
-
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/rastrear"> Rastrear Pedido </Link>
-                                </li>
-
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/acerca"> Acerca de </Link>
-                                </li>
-
-                            </ul>
+                            <div className="nav-link paraEfecto">
+                                <Link className="nav-link" to="/productos/ofertas"> Ofertas </Link>
+                            </div>
+                            <div className="nav-link paraEfecto">
+                                <Link className="nav-link" to="/productos/nuevos"> Nuevo Ingreso </Link>
+                            </div>
+                            <div className="nav-link paraEfecto">
+                                <Link className="nav-link" to="/tiendas"> Tiendas </Link>
+                            </div>
+                            <div className="nav-link paraEfecto">
+                                <Link className="nav-link" to="/rastrear"> Rastrear Pedido </Link>
+                            </div>
 
                         </div>
+
+
+
+
+        
 
 
                     </div>

@@ -1,3 +1,8 @@
+.navBar {
+    position: sticky;
+    top: 0;
+}
+
 .flexDiv {
     display: flex;
     flex-direction: column;
@@ -11,7 +16,7 @@
 
 .navbar-brand {
     font-family: "Press start 2p";
-    font-size: 25px;
+    font-size: 23px;
     font-weight: 800;
     display: flex;
 
@@ -30,26 +35,102 @@
     border-radius: 16px;
     margin-top: 10px;
     margin-bottom: 10px;
+    margin-right: 0px !important;
 }
 
 
 .iconsDiv {
     display: flex;
     justify-content: flex-end;
-    > a{
+
+    >a {
         margin-left: 10px;
         margin-right: 10px;
     }
 }
-.perfil{
+
+.perfil {
     display: flex;
     align-items: center;
-    svg{
+
+    svg {
         margin-right: 6px;
         margin-left: 15px;
     }
-    span{
+
+    span {
         font-size: 18px;
         font-weight: 500;
+    }
+}
+
+
+.scroll-container {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    /* permite scroll horizontal */
+    -webkit-overflow-scrolling: touch;
+    /* scroll suave en iOS */
+    gap: 15px;
+}
+
+.scroll-container>.nav-link {
+    flex: 0 0 auto;
+    /* evita que se encojan */
+    min-width: 100px;
+    /* ancho mínimo */
+    height: 35px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-left: 12px;
+    padding-right: 12px;
+
+    border-radius: 15px;
+}
+
+.paraEfecto:active {
+    transform: scale(0.97);
+    background: rgb(212, 213, 221);
+    color: rgb(33, 37, 41);
+}
+
+
+
+@media (max-width: 500px) {
+    .navbar-brand {
+        font-size: 20px;
+
+        >img {
+            width: 40px;
+        }
+    }
+
+    .iconsDiv>a {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    .perfil {
+        svg {
+            margin: 0px;
+        }
+
+        span {
+            display: none;
+        }
+    }
+
+
+    .scroll-container {
+        padding-top: 8px;
+        padding-bottom: 8px;
+
+        >div {
+            background: rgb(229, 230, 235);
+        }
     }
 }

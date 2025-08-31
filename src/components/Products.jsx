@@ -10,6 +10,19 @@ function Products(){
             <h1>Products</h1>
             <h1>{slug}</h1>
             <h1>{query}</h1>
+            
+            <h1>Products</h1>
+            <h1>Products</h1>
+            <h1>Products</h1>
+            <h1>Products</h1>
+            <h1>Products</h1>
+            <h1>Products</h1>
+            <h1>Products</h1>
+            <h1>Products</h1>
+            <h1>Products</h1>
+            <h1>Products</h1>
+            <h1>Products</h1>
+            <h1>Products</h1>
         </div>
     )
 }

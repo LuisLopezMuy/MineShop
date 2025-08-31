@@ -12,6 +12,9 @@ import Home from './components/Home.jsx';
 import Perfil from './components/Perfil.jsx';
 import Carrito from './components/Carrito.jsx';
 import Pago from './components/Pago.jsx';
+import Favoritos from './components/Favoritos.jsx';
+import Politicas from './components/Politicas.jsx';
+import Desarrollador from './components/Desarrollador.jsx';
 import '../public/styles/index.css'
 
 
@@ -29,7 +32,10 @@ const router = createBrowserRouter([
       { path: "/carrito", element: <Carrito /> },
       { path: "/pago", element: <Pago /> },
       { path: "/acerca", element: <About /> },
-      { path: "/contact", element: <Contact /> }
+      { path: "/contact", element: <Contact /> },
+      { path: "/favoritos", element: <Favoritos /> },
+      { path: "/politicas", element: <Politicas /> },
+      { path: "/desarrollador", element: <Desarrollador /> }
     ]
   }
 ]);
