@@ -1,43 +1,55 @@
-.flexDiv{
+.flexDiv {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-.nav1{
-    display: flex;
-    justify-content: space-between;
-}
-
-.iconsDiv > a {
-    margin-right: 10px;
-    margin-left: 10px;
-    color: rgb(53, 52, 52);
-}
-
-.navbar-brand{
-    font-family: "Press start 2p";
-    font-size: 25px;
-    font-weight: 800;
-    display: flex;
-}
-
-.navbar-brand > img {
-    width: 50px;
-    margin-right: 10px;
-}
-
-
-.navbar-brand > div {
+.sec1>div {
     display: flex;
     align-items: center;
 }
 
-.navBar{
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+.navbar-brand {
+    font-family: "Press start 2p";
+    font-size: 25px;
+    font-weight: 800;
+    display: flex;
+
+    >div {
+        display: flex;
+        align-items: center;
+    }
+
+    >img {
+        width: 50px;
+        margin-right: 10px;
+    }
 }
-.navBar > nav{
-    position: inherit;
+
+.form-control {
+    border-radius: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.iconsDiv {
+    display: flex;
+    justify-content: flex-end;
+    > a{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+.perfil{
+    display: flex;
+    align-items: center;
+    svg{
+        margin-right: 6px;
+        margin-left: 15px;
+    }
+    span{
+        font-size: 18px;
+        font-weight: 500;
+    }
 }
