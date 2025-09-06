@@ -1,13 +1,33 @@
 import { Link } from "react-router"
 import '../../public/styles/ProductMiniHome.css'
 
-function ProductMiniHome() {
+function ProductMiniHome(props) {
     return (
         <Link to={`/producto/1`}>
-            <div className="card rounded-4" style={{ width: '14rem' , zIndex: '0'}}>
-                <img className="rounded-5   " src="https://www.steren.com.gt/media/catalog/product/cache/bb0cad18a6adb5d17b0efd58f4201a2f/image/22545a64c/audifonos-bluetooth-touch-true-wireless-con-active-noise-cancelling-y-enviromental-noise-cancelling.jpg" className="card-img-top" alt="Imagen de producto" />
+            <div className="card rounded-4" style={{ width: props.tamanoCard ? "14rem" : "13rem", zIndex: '0' }}>
+                <img src={props.imgURL} className="card-img-top" alt="Imagen de producto" />
                 <div className="card-body">
-                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+
+
+                    <div className="title-div">
+                        <p className="card-text card-title">{props.nombre} </p>
+                    </div>
+
+
+                    <div className="adds-div">
+
+                        <div className="flags-div">
+                            {props.esOferta && <span class="badge text-bg-danger">OFERTA</span> }
+                            {props.esNuevo && <span class="badge text-bg-primary">NUEVO</span> }
+                        </div>
+
+                        <div className="price-div">
+                            <p className="card-text card-price">{new Intl.NumberFormat('es-GT', { style: 'currency', currency: 'GTQ' }).format(props.precio)} </p>
+                        </div>
+
+                    </div>
+
+
                 </div>
             </div>
         </Link>
