@@ -1,23 +1,13 @@
+import { useParams } from "react-router"
+
 function Producto(){
+
+    const {id} = useParams();
+
+
     return(
         <div>
-            <h1>1 Producto</h1>
-            <h1>1 Producto</h1>
-            <h1>1 Producto</h1>
-            <h1>1 Producto</h1>
-            <h1>1 Producto</h1>
-            <h1>1 Producto</h1>
-            <h1>1 Producto</h1>
-            <h1>1 Producto</h1>
-            <h1>1 Producto</h1>
-            <h1>1 Producto</h1>
-            <h1>1 Producto</h1>
-            <h1>1 Producto</h1>
-            <h1>1 Producto</h1>
-            <h1>1 Producto</h1>
-            <h1>1 Producto</h1>
-            <h1>1 Producto</h1>
-            <h1>1 Producto</h1>
+            <h1>Producto {id}</h1>
         </div>
     )
 }

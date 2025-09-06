@@ -18,23 +18,23 @@
     transition: all 0.1s ease-in-out;
 }
 
-.title-div{
+.title-div {
     min-height: 75px;
 }
 
-.adds-div{
+.adds-div {
     display: flex;
     flex-direction: row;
     min-height: 45px;
 }
 
-.flags-div{
+.flags-div {
     display: flex;
     flex-direction: column;
     gap: 4px;
 }
 
-.price-div{
+.price-div {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -43,13 +43,13 @@
 }
 
 .card-title {
-    font-size: 0.9rem;
+    font-size: .95rem;
     font-weight: 600;
     color: black;
     margin-bottom: 0.2rem;
-    
 
-    /* PARA QUE NO SOBRESALGA 3 LINEAS */
+
+    /* PARA QUE NO PASE DE 3 LINEAS */
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
@@ -57,13 +57,37 @@
     overflow: hidden;
 }
 
-.text-bg-danger{
+.text-bg-danger {
     background-color: red !important;
 }
 
-.card-price{
+.card-price {
     font-size: 1.35rem;
     font-weight: 750;
     color: black;
-    margin-bottom: 0.2rem;   
+    margin-bottom: 0.2rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+
+@media (max-width: 542px) {
+    .card {
+        width: 18.1vh !important;
+    }
+    .adds-div{
+        flex-direction: column;
+    }
+    .flags-div{
+        flex-direction: row;
+        min-height: 21px;
+        margin-bottom: 4px;
+    }
+    .card-price{
+        font-size: 1.25rem;
+    }
 }

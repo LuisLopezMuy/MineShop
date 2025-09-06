@@ -24,18 +24,18 @@ function NavBar() {
 
                         <div className="row sec1">
 
-                            <div className="col-6 col-xl-3 order-1">
+                            <div className="col-6 col-md-4 col-xl-3 order-1">
                                 <Link className="navbar-brand " to="/">
                                     <img src="/logo.png" ></img>
                                     <div><span>MineShop</span></div>
                                 </Link>
                             </div>
 
-                            <div className="col-12 col-xl-6 order-3 order-xl-2">
+                            <div className="col-12 col-md-5 col-xl-6 order-3 order-md-2">
                                 <input className="form-control me-2" type="text" placeholder="🔍 Busca un producto..." aria-label="Search" onInput={handleInput} />
                             </div>
 
-                            <div className="iconsDiv col-6 col-xl-3 order-2 order-xl-3">
+                            <div className="iconsDiv col-6 col-md-3 col-xl-3 order-2 order-md-3">
                                 <div className="iconsDiv">
                                     <Link className="nav-link paraEfecto" to="/favoritos">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-bookmark-heart" viewBox="0 0 16 16">

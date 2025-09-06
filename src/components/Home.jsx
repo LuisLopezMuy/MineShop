@@ -29,7 +29,7 @@ function Home() {
         {
             id: 1,
             nombre: "Laptop DELL Latitude 3540, core i5, 8GB RAM, 256GB SSD, Windows 11, 14 pulgadas",
-            precio: 4999.99,
+            precio: 99999.99,
             esOferta: true,
             esNuevo: false,
             imgURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5pRa-Yr-8rm1YVeH1pp5lA5MMCfqG7zNHAQ&s"

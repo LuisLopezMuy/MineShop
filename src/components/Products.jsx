@@ -69,11 +69,11 @@ function Products(){
         <div className='container-xl mx-auto mt-4'>
             <div className="row">
 
-                <div className="col-3">
+                <div className="col-12 col-lg-3">
                     <Filtros />
                 </div>
 
-                <div className="col-9">
+                <div className="col-12 col-lg-9">
                     <ProductsDiv productos={arrayProductos} tamanoCard={tamanoCard} />
                 </div>
 
