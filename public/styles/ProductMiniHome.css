@@ -1,0 +1,8 @@
+.card{
+    width: 14rem;
+    z-index: 0;
+    overflow: hidden;
+    border: none;
+    background-color: white;
+}
+

@@ -15,6 +15,7 @@ import Pago from './components/Pago.jsx';
 import Favoritos from './components/Favoritos.jsx';
 import Politicas from './components/Politicas.jsx';
 import Desarrollador from './components/Desarrollador.jsx';
+import Producto from './components/Producto.jsx';
 import '../public/styles/index.css'
 
 
@@ -35,7 +36,8 @@ const router = createBrowserRouter([
       { path: "/contact", element: <Contact /> },
       { path: "/favoritos", element: <Favoritos /> },
       { path: "/politicas", element: <Politicas /> },
-      { path: "/desarrollador", element: <Desarrollador /> }
+      { path: "/desarrollador", element: <Desarrollador /> },
+      { path: "/producto/:id", element: <Producto /> }
     ]
   }
 ]);

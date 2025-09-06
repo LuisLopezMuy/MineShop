@@ -1,6 +1,12 @@
 .navBar {
     position: sticky;
     top: 0;
+    z-index: 1030;
+
+    >nav {
+        background-color: rgb(95, 84, 246) !important;
+        color: white;
+    }
 }
 
 .flexDiv {
@@ -94,11 +100,15 @@
 
 .paraEfecto:active {
     transform: scale(0.97);
-    background: rgb(212, 213, 221);
-    color: rgb(33, 37, 41);
+    background: #8f9bf8;
+    color: white;
 }
 
-
+.paraEfecto2:active {
+    transform: scale(0.97);
+    background: #dbdbdb;
+    color: black;
+}
 
 @media (max-width: 500px) {
     .navbar-brand {
