@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './components/App.jsx'
 import About from './components/About.jsx'
 import Contact from './components/Contact.jsx'
-import Products from './components/Products.jsx'
+import Productos from './components/Productos.jsx'
 import NotFound from './components/NotFound.jsx';
 import Tiendas from './components/Tiendas.jsx';
 import Rastrear from './components/Rastrear.jsx';
@@ -26,7 +26,7 @@ const router = createBrowserRouter([
     errorElement: <NotFound />, 
     children: [
       { path: "/", element: <Home /> },
-      { path: "/productos/:slug", element: <Products /> },
+      { path: "/productos/:slug", element: <Productos /> },
       { path: "/rastrear", element: <Rastrear /> },
       { path: "/tiendas", element: <Tiendas /> },
       { path: "/perfil", element: <Perfil /> },
