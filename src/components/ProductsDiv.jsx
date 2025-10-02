@@ -37,13 +37,17 @@ function ProductsDiv(props) {
         fetchData()
     }, [props.selection])
 
-    if (loading) return <p>Cargando datos...</p>
+    const likeData = JSON.parse(localStorage.getItem('likeData')) || []
+    const cartData = JSON.parse(localStorage.getItem('cartData')) || []
+
+
+    if (loading) return <div style={{ display: 'flex', justifyContent: 'center', fontSize: '2rem', fontWeight: 'bold', color: 'gray' }}><p>Cargando datos...</p></div>
 
     return (
 
         <div style={{ padding: '20px', display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: '15px', justifyContent: 'center' }}>
             {data.map(
-                (prod) => { return <ProductMiniHome key={prod.id} id={prod.id} nombre={prod.nombre} precio={prod.precio} imgURL={prod.img_url} esOferta={prod.es_oferta} esNuevo={prod.es_nuevo} tamanoCard={props.tamanoCard} /> }
+                (prod) => { return <ProductMiniHome key={prod.id} id={prod.id} nombre={prod.nombre} precio={prod.precio} imgURL={prod.img_url} esOferta={prod.es_oferta} esNuevo={prod.es_nuevo} tamanoCard={props.tamanoCard} likeActive={likeData.includes(prod.id)} cartActive={cartData.some(item => item.id === prod.id)} /> }
             )}
 
         </div>

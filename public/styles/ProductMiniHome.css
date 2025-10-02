@@ -6,10 +6,43 @@
     background-color: white;
 }
 
-.card img {
+.card>.divImg img {
     width: 100%;
     height: 14rem;
     object-fit: contain;
+}
+
+.card .imgBotones {
+    position: absolute;
+    top: 51%;
+    right: 2%;
+    display: flex;
+    gap: 0.3rem;
+
+    p {
+        font-size: 1.8rem;
+        padding: 0.2rem 0.5rem;
+
+        line-height: 0.6;
+        border-radius: 0.8rem;
+        color: rgb(255, 255, 255);
+
+        display: flex;
+        align-items: center;
+
+        span {
+            font-size: 0.8rem;
+            margin-left: 0.3rem;
+            font-weight: 500;
+        }
+
+        
+    }
+    
+    >:hover {
+        background-color: rgba(79, 90, 247, 0.877) !important;
+    }
+    
 }
 
 .card:hover {
@@ -85,15 +118,18 @@ a {
     .card {
         width: 18.1vh !important;
     }
-    .adds-div{
+
+    .adds-div {
         flex-direction: column;
     }
-    .flags-div{
+
+    .flags-div {
         flex-direction: row;
         min-height: 21px;
         margin-bottom: 4px;
     }
-    .card-price{
+
+    .card-price {
         font-size: 1.25rem;
     }
 }
