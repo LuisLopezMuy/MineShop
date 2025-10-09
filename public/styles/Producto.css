@@ -1,0 +1,70 @@
+.nombre{
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1000px;
+}
+
+.precio{
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #5d3ff4;
+}
+
+.descripcion{
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.caracteristicas li{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+button svg{
+    margin-right: 10px;
+}   
+
+.imgDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5%;
+    background-color: white;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+}
+
+.imgDiv img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.prodFlagsDiv {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+.text-bg-danger {
+    background-color: red !important;
+}
+
+.cantidadDiv{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+
+    span{
+        font-size: 1.25rem;
+        font-weight: 500;
+    }
+
+    input{
+        width: 100px;
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+
+}
