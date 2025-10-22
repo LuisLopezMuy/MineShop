@@ -33,10 +33,9 @@ function ProductsDiv(props) {
             }
             setLoading(false)
         }
-
         fetchData()
     }, [props.selection])
-
+    
     const likeData = JSON.parse(localStorage.getItem('likeData')) || []
     const cartData = JSON.parse(localStorage.getItem('cartData')) || []
 

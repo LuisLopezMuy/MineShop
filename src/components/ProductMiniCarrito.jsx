@@ -1,19 +1,24 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import '../../public/styles/Carrito.css';
 
 
 function Carrito() {
 
-    const [cartData, setCartData] = useState( () => {
-        const cart = localStorage.getItem('cartData');
-        return cart ? JSON.parse(cart) : []
-    })
-    
+    const [loading, setLoading] = useState(true)
+    const [carData, setCarData] = useState()
+
+    useEffect(() => {
+        setCarData(JSON.parse(localStorage.getItem('cartData')) || []);
+        console.log(carData)
+        setLoading(false)
+    }, [])
+
+    if (loading) return <div style={{ display: 'flex', justifyContent: 'center', fontSize: '2rem', fontWeight: 'bold', color: 'gray' }}><p>Cargando datos...</p></div>
+
 
     return (
 
         <div className="cart-wrapper">
-
             <div className="container">
                 <div className="row g-4">
                     {// Cart Items Section 
