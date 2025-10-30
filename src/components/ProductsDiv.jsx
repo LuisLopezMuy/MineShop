@@ -39,7 +39,7 @@ function ProductsDiv(props) {
     const likeData = JSON.parse(localStorage.getItem('likeData')) || []
     const cartData = JSON.parse(localStorage.getItem('cartData')) || []
 
-    if (loading) return <div style={{ display: 'flex', justifyContent: 'center', fontSize: '2rem', fontWeight: 'bold', color: 'gray' }}><p>Cargando datos...</p></div>
+    if (loading) return <div style={{ display: 'flex', justifyContent: 'center', fontSize: '2rem', fontWeight: 'bold', color: 'gray' }}><p>Cargando productos...</p></div>
 
     return (
 

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import '../../public/styles/Carrito.css';
 
 
@@ -149,7 +150,10 @@ function Carrito() {
 
                             <div className="d-flex justify-content-center gap-2">
                                 <i className="bi bi-shield-check text-success"></i>
-                                <small className="text-muted">El pago es seguro. Ver Políticas</small>
+                                <small className="text-muted">
+                                    El pago es seguro.
+                                    <Link to="/politicas" style={{textAlign: "center"}} className="nav-link px-2 text-body-secondary">Ver Políticas</Link>
+                                </small>
                             </div>
                         </div>
                     </div>

@@ -12,8 +12,8 @@ function Footer() {
                 <ul className="nav col-md-4 justify-content-end">
                     <li className="nav-item"><Link to="/acerca" className="nav-link px-2 text-body-secondary">Acerca de</Link> </li>
                     <li className="nav-item"><Link to="/politicas" className="nav-link px-2 text-body-secondary">Políticas</Link></li>
-                    <li className="nav-item"><a href="https://wa.link/abcrkh" className="nav-link px-2 text-body-secondary" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
                     <li className="nav-item"><Link to="/desarrollador" className="nav-link px-2 text-body-secondary">Desarrollador</Link></li>
+                    <li className="nav-item"><a href="https://wa.link/abcrkh" className="nav-link px-2 text-success" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
                 </ul>
             </footer>
         </div>
