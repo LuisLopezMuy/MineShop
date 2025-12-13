@@ -2,6 +2,8 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './components/App.jsx'
+import Login from './components/Login.jsx'
+import ProtectedRoute from './components/ProtectedRoute.jsx'
 import About from './components/About.jsx'
 import Productos from './components/Productos.jsx'
 import NotFound from './components/NotFound.jsx';
@@ -21,14 +23,15 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement: <NotFound />, 
+    errorElement: <NotFound />,
     children: [
       { path: "/", element: <Home /> },
+      { path: "/login", element: <Login /> },
       { path: "/productos/:slug", element: <Productos /> },
       { path: "/tiendas", element: <Tiendas /> },
-      { path: "/pedidos", element: <Pedidos /> },
+      { path: "/pedidos", element: <ProtectedRoute><Pedidos /></ProtectedRoute> },
       { path: "/carrito", element: <Carrito /> },
-      { path: "/pago", element: <Pago /> },
+      { path: "/pago", element: <ProtectedRoute><Pago /></ProtectedRoute> },
       { path: "/acerca", element: <About /> },
       { path: "/favoritos", element: <Favoritos /> },
       { path: "/politicas", element: <Politicas /> },

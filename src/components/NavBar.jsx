@@ -1,4 +1,5 @@
 import { Link, useNavigate } from "react-router"
+import { logOut } from '../auth/authService'
 import '../../public/styles/NavBar.css'
 
 function NavBar() {
@@ -62,7 +63,7 @@ function NavBar() {
 
                                         <ul className="dropdown-menu dropdown-menu-end">
                                             <li>
-                                                <Link className="dropdown-item paraEfecto2" to="#"> Cerrar Cesión </Link>
+                                                <Link className="dropdown-item paraEfecto2" onClick={logOut} > Cerrar Sesión </Link>
                                             </li>
                                             <li>
                                                 <Link className="dropdown-item paraEfecto2" to="/pedidos"> Mis Pedidos </Link>

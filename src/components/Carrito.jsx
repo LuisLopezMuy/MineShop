@@ -1,15 +1,17 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router"
 import '../../public/styles/Carrito.css';
 
 
 function Carrito() {
 
-    const [cartData, setCartData] = useState( () => {
+    const navigate = useNavigate();
+
+    const [cartData, setCartData] = useState(() => {
         const cart = localStorage.getItem('cartData');
         return cart ? JSON.parse(cart) : []
     })
-    
+
 
     return (
 
@@ -42,9 +44,9 @@ function Carrito() {
                                     </div>
                                     <div className="col-md-3">
                                         <div className="d-flex align-items-center gap-2">
-                                            <button className="quantity-btn" onclick="updateQuantity(1, -1)">-</button>
+                                            <button className="quantity-btn" onClick="updateQuantity(1, -1)">-</button>
                                             <input type="number" className="quantity-input" min="1" />
-                                            <button className="quantity-btn" onclick="updateQuantity(1, 1)">+</button>
+                                            <button className="quantity-btn" onClick="updateQuantity(1, 1)">+</button>
                                         </div>
                                     </div>
                                     <div className="col-md-2">
@@ -69,9 +71,9 @@ function Carrito() {
                                     </div>
                                     <div className="col-md-3">
                                         <div className="d-flex align-items-center gap-2">
-                                            <button className="quantity-btn" onclick="updateQuantity(2, -1)">-</button>
+                                            <button className="quantity-btn" onClick="updateQuantity(2, -1)">-</button>
                                             <input type="number" className="quantity-input" min="1" />
-                                            <button className="quantity-btn" onclick="updateQuantity(2, 1)">+</button>
+                                            <button className="quantity-btn" onClick="updateQuantity(2, 1)">+</button>
                                         </div>
                                     </div>
                                     <div className="col-md-2">
@@ -96,9 +98,9 @@ function Carrito() {
                                     </div>
                                     <div className="col-md-3">
                                         <div className="d-flex align-items-center gap-2">
-                                            <button className="quantity-btn" onclick="updateQuantity(3, -1)">-</button>
+                                            <button className="quantity-btn" onClick="updateQuantity(3, -1)">-</button>
                                             <input type="number" className="quantity-input" min="1" />
-                                            <button className="quantity-btn" onclick="updateQuantity(3, 1)">+</button>
+                                            <button className="quantity-btn" onClick="updateQuantity(3, 1)">+</button>
                                         </div>
                                     </div>
                                     <div className="col-md-2">
@@ -145,14 +147,15 @@ function Carrito() {
                                 </div>
                             </div>
 
-                            <button className="btn btn-primary checkout-btn w-100 mb-3">
-                                Proceder al Pago                            </button>
+                            <button className="btn btn-primary checkout-btn w-100 mb-3" onClick={() => { navigate("/pago") }} >
+                                Proceder al Pago
+                            </button>
 
                             <div className="d-flex justify-content-center gap-2">
                                 <i className="bi bi-shield-check text-success"></i>
                                 <small className="text-muted">
-                                    El pago es seguro.
-                                    <Link to="/politicas" style={{textAlign: "center"}} className="nav-link px-2 text-body-secondary">Ver Políticas</Link>
+                                    El pago es seguro
+                                    <Link to="/politicas" style={{ textAlign: "center" }} className="nav-link px-2 text-body-secondary">Ver Políticas</Link>
                                 </small>
                             </div>
                         </div>
