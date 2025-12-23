@@ -11,7 +11,7 @@ function Tiendas() {
     useEffect(() => {
         const fetchData = async () => {
             const { data, error } = await supabase
-                .from('tiendas')
+                .from('Tiendas')
                 .select(`id, nombre, direccion, horario, telefono, whatsapp`)
 
             if (error) {

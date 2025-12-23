@@ -8,20 +8,20 @@ function Producto() {
     const { id } = useParams();
 
     const [data, setData] = useState([])
-    const [cantidad, setCantidad] = useState(1)
+    const [qty, setQty] = useState(1);
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
         const fetchData = async () => {
             const { data, error } = await supabase
-                .from('productos')
+                .from('Productos')
                 .select(`id, 
                     nombre, 
                     precio, 
                     descripcion,
-                    img_url, 
-                    es_oferta, 
-                    es_nuevo,
+                    imagen, 
+                    esOferta, 
+                    esNuevo,
                     caracteristicas`)
                 .eq('id', id)
                 .limit(1)
@@ -38,9 +38,6 @@ function Producto() {
 
     }, [])
 
-    const handleCantidadChange = (event) => {
-        setCantidad(event.target.value);
-    }
 
     if (loading) return <div style={{ display: 'flex', justifyContent: 'center', fontSize: '2rem', fontWeight: 'bold', color: 'gray' }}><p>Cargando datos...</p></div>
 
@@ -50,15 +47,15 @@ function Producto() {
                 <div className="row">
 
                     <div className="col-md-6 mb-4 imgDiv">
-                        <img src={data[0].img_url} alt="Imagen del producto" className="img-fluid mb-3 product-image" id="mainImage" />
+                        <img src={data[0].imagen} alt="Imagen del producto" className="img-fluid mb-3 product-image" id="mainImage" />
                     </div>
-
-                    <div className="col-md-6">
+                    <div className="col-md-1"></div>
+                    <div className="col-md-5">
                         <h2 className="mb-3 mt-2 nombre">{data[0].nombre}</h2>
 
                         <div className="prodFlagsDiv mb-3">
-                            {data[0].es_oferta && <h3><span className="badge text-bg-danger">Oferta</span></h3>}
-                            {data[0].es_nuevo && <h3><span className="badge text-bg-primary">Nuevo</span></h3>}
+                            {data[0].esOferta && <h3><span className="badge text-bg-danger">Oferta</span></h3>}
+                            {data[0].esNuevo && <h3><span className="badge text-bg-primary">Nuevo</span></h3>}
                         </div>
 
                         <div className="mb-5">
@@ -71,9 +68,20 @@ function Producto() {
 
                         <div className="mb-4 cantidadDiv">
                             <span className="">Cantidad:  </span>
-                            <input type="number" className="form-control" id="quantity" min="1"  value={cantidad} onChange={handleCantidadChange} defaultValue={1} />
+
+
+                            <div className="col-md-3">
+                                <div className="d-flex align-items-center gap-2">
+                                    <button className=" quantity-btn btn-primary" onClick={() => { if (qty > 1) { setQty(qty - 1) } }} >-</button>
+                                    <input type="number" className="quantity-input" min="1" value={qty} />
+                                    <button className="quantity-btn btn-primary" onClick={() => { setQty(qty + 1) }} >+</button>
+                                </div>
+                            </div>
+
+
+
                         </div>
-                        
+
                         <button className="btn btn-primary btn-lg mb-3 me-2">
 
                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-cart4" viewBox="0 0 16 16">
@@ -84,13 +92,13 @@ function Producto() {
                         </button>
                         <button className="btn btn-outline-secondary btn-lg mb-3">
 
-                            <svg  xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-bookmark-heart" viewBox="0 0 16 16">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-bookmark-heart" viewBox="0 0 16 16">
                                 <path fillRule="evenodd" d="M8 4.41c1.387-1.425 4.854 1.07 0 4.277C3.146 5.48 6.613 2.986 8 4.412z" />
                                 <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z" />
                             </svg>
 
                             <span className="ml-5">Guardar</span>
-                            
+
 
                         </button>
                         <div className="mt-4 caracteristicas">
